@@ -1,0 +1,15 @@
+function SetSimulationParameters(experiment)
+
+
+VarsToSet=fieldnames(experiment.SimulationParameter);
+
+
+
+
+for i=1:size(VarsToSet,1)
+ set_param(experiment.ModelName,VarsToSet{i},getfield(experiment.ModelParameter,VarsToSet{i}))
+
+end
+
+
+
